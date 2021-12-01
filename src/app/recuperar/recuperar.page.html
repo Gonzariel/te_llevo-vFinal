@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <ion-app>
+    <ion-content fullscreen>
+      <img
+        margin="auto"
+        width="300px"
+        src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg"
+      />
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Recuperar Contraseña</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label position="floating"></ion-label>
+          <ion-input
+            placeholder="Correo Electronico"
+            type="text"
+            [(ngModel)]="recuperar.email"
+            name="email"
+            required
+          ></ion-input>
+          <ion-input
+            placeholder="Nueva Contraseña"
+            type="password"
+            [(ngModel)]="recuperar.pass"
+            name="pass"
+            required
+          ></ion-input>
+          <ion-button shape="block" (click)="cambiarContrasena()"
+            >Recuperar</ion-button
+          >
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <mat-card>
+      <form class="example-form">
+        <mat-label id="inicio_sesion">Inicio Sesion</mat-label>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Correo</mat-label>
+          <input
+            matInput
+            placeholder="correo"
+            type="text"
+            [(ngModel)]="usuario.usser"
+            name="usuario"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input
+            matInput
+            placeholder="contraseña"
+            type="password"
+            [(ngModel)]="usuario.pass"
+            name="pass"
+            required
+          />
+        </mat-form-field>
+        <mat-list-item role="listitem">
+          <ion-icon name="car-sport-outline"></ion-icon>
+          <ion-toggle
+            (ionChange)="change()"
+            [(ngModel)]="rol"
+            name="rol"
+          ></ion-toggle>
+          <ion-icon name="accessibility-outline"></ion-icon>
+        </mat-list-item>
+
+        <button mat-raised-button color="primary" (click)="loginUsuarios()">
+          Iniciar Sesion
+        </button>
+      </form>
+      <!---<mat-label id="recuperar" >Recuperar Contraseña</mat-label>---->
+      <a (click)="registro()">Registrarse</a>
+      <a (click)="cambiopass()">Recuperar Contraseña</a>
+      <button mat-raised-button color="alert" (click)="obtenerUsuarios()">
+        Obtener Usuarios
+      </button>
+    </mat-card>
+  </div>
+</ion-content>
